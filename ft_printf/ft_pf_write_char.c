@@ -3,7 +3,6 @@
 int					ft_pf_write_char(va_list vl, t_cell *list)
 {
 	char temp;
-	int len;
 	int p_len;
 	int rst;
 

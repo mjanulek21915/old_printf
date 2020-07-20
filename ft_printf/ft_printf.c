@@ -1,6 +1,6 @@
 #include "ft_printf.h"
 
-void static			ft_pf_read_hdl(char *str, t_cell **list, int *arg_count)
+static void			ft_pf_read_hdl(char *str, t_cell **list, int *arg_count)
 {
 	while (*str)
 	{
@@ -13,8 +13,8 @@ void static			ft_pf_read_hdl(char *str, t_cell **list, int *arg_count)
 		str++;
 	}
 }
-// valeur negative pour write en cas d erreur ecriture vers 1?
-int static			ft_pf_write_hdl(char *str, t_cell *list, int *arg_count, va_list vl)
+
+static int			ft_pf_write_hdl(char *str, t_cell *list, va_list vl)
 {
 	t_cell *old_list;
 	int n_count;
@@ -51,5 +51,5 @@ int				ft_printf(char *str, ...)
 	list = NULL;
 	ft_pf_read_hdl(str, &list, &arg_count);
 	va_start(vl, str);
-	return (ft_pf_write_hdl(str, list, &arg_count, vl));
+	return (ft_pf_write_hdl(str, list, vl));
 }

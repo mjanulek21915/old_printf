@@ -1,1 +1,5 @@
-gcc -g -fsanitize=address ./MAIN/PRINTF/*.c ./MAIN/DEBUG/*.c ./MAIN/main.c
+if [ "$1" = 'W' ]
+then
+    flags="-Wall -Werror -Wextra"
+fi
+gcc -g $flags -fsanitize=address  -I . -I ft_printf/ ft_printf/*.c main.c

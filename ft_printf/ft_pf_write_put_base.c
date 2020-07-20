@@ -1,6 +1,6 @@
 #include "ft_printf.h"
 
-int static			ft_pf_put_base_recursive(long long n, char *base, int len_base)
+static int			ft_pf_put_base_recursive(long long n, char *base, int len_base)
 {
 	long long temp;
 	int i;
@@ -16,9 +16,7 @@ int static			ft_pf_put_base_recursive(long long n, char *base, int len_base)
 int				ft_pf_write_put_base(long long n, char *base)
 {
 	int len_base;
-	int rst;
 
-	rst = 0;
 	len_base = ft_pf_strlen(base);
 	return (ft_pf_put_base_recursive(n, base, len_base));
 }

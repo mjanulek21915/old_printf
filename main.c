@@ -1,10 +1,9 @@
-#include "PRINTF/ft_printf.h"
-#include "DEBUG/debug.h"
+#include "ft_printf.h"
 
 int         main(int ac, char **av)
 {
 
-    char str[100]="|% 3  .25duaaa|\n";
+    char str[100]="|%    cess|\n";
     char *ptr = str;
     int width = 50;
 	int precision = 12;
@@ -13,6 +12,6 @@ int         main(int ac, char **av)
 	int o;
     ft = ft_printf(str, width, precision, 1525);
     o = printf(str, width, precision, 1525);
-	printf("fait maison\t: %d\n", ft);
-	printf("l originel\t: %d\n", ft);
+	printf("fait maison\t:|%d|\n", ft);
+	printf("l originel\t:|%d|\n", o);
 } 

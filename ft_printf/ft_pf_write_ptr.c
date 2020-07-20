@@ -1,6 +1,6 @@
 #include "ft_printf.h"
 
-int static			ft_pf_write_int_hdl_hdl(t_cell *list)
+static int			ft_pf_write_int_hdl_hdl(t_cell *list)
 {
 	int rst;
 
@@ -13,7 +13,7 @@ int static			ft_pf_write_int_hdl_hdl(t_cell *list)
 	return (rst);
 }
 
-int static			ft_pf_write_ptr_hdl(t_cell *list)
+static int			ft_pf_write_ptr_hdl(t_cell *list)
 {
 	int rst;
 
